@@ -1,0 +1,33 @@
+name: Food Waste Detection
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  detect-food:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run YOLO food detection
+        run: |
+          python src/detect_food.py food_sample.png --output results
+
+      - name: Upload detection results
+        uses: actions/upload-artifact@v4
+        with:
+          name: food-detection-results
+          path: results/
