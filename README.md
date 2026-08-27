@@ -24,7 +24,6 @@ Image acquisition
 
 - Detect food-related objects in images using computer vision.
 - Estimate the type and number of detected food items.
-- Evaluate model performance using standard classification and detection metrics.
 - Explore how computer-vision outputs could support automated food-waste monitoring.
 - Provide a reproducible foundation for future integration with a physical smart-bin system.
 
@@ -36,7 +35,7 @@ The project is designed with reproducibility in mind, including:
 
 - Python-based analysis
 - structured source code
-- quantitative model evaluation
+- quantitative detection results
 - visualisation of predictions
 - reproducible experiment configuration
 - automated testing through GitHub Actions
