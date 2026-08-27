@@ -78,6 +78,23 @@ The output demonstrates object detection using bounding boxes and confidence sco
 
 The accompanying `food_sample_detections.csv` file contains the detected food classes, confidence scores, and bounding-box coordinates.
 
+## Detection Results
+
+For the example image, the pretrained YOLO model detected six food-related objects:
+
+| Food Class | Confidence |
+|------------|------------|
+| broccoli   | 91.55%     |
+| orange     | 91.55%     |
+| carrot     | 91.51%     |
+| banana     | 91.17%     |
+| apple      | 89.65%     |
+| pizza      | 74.72%     |
+
+The detection results are also exported to `food_sample_detections.csv`, including the detected class, confidence score, and bounding-box coordinates.
+
+These results demonstrate the feasibility of the proposed computer-vision component as a starting point for an AI-assisted food-waste monitoring system.
+
 ## Reproducibility
 
 The project is designed to be reproducible.
